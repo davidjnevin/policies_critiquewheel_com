@@ -1,0 +1,8 @@
+#TableOfContents > ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  #TableOfContents > ul > li ul {
+    list-style-type: none;
+    padding-left: 1em;
+  }
