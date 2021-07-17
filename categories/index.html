@@ -5,16 +5,22 @@
     
     
     <title>Critique Wheel Policies | Categories</title>
-    <link rel="stylesheet" href="css/policySite.css" Content-Type="text/css; charset=utf-8">
+    <link rel="stylesheet" href="/css/policySite.css" Content-Type="text/css; charset=utf-8">
     <link rel="stylesheet" href="https://critiquewheel.blueseawriters.com/lib/bootstrap/dist/css/bootstrap.min.css" Content-Type="text/css; charset=utf-8" />
     <link rel="stylesheet" href="https://critiquewheel.blueseawriters.com/css/site.css" Content-Type="text/css; charset=utf-8" />
     <link href="https://critiquewheel.blueseawriters.com/lib/font-awesome/css/all.min.css" rel="stylesheet" Content-Type="text/css; charset=utf-8" />
     <link rel="apple-touch-icon" sizes="180x180" href="https://critiquewheel.blueseawriters.com/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="https://critiquewheel.blueseawriters.com/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://critiquewheel.blueseawriters.com/favicon-16x16.png">
-    <link rel="manifest" href="https://critiquewheel.blueseawriters.com/site.webmanifest">
-</head><body><header>
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
+    
+</head><body>
+        <noscript>
+            You need to enable JavaScript to run this app.
+        </noscript>
+        <div id="root">
+            <div class="page-wrapper container-fluid">
+                <div><header>
+    <nav id="navigation" class="navbar navbar-fixed-top navbar-expand-sm navbar-toggleable-lg navbar-dark bg-dark border-bottom box-shadow mb-3 ">
         <div class="container">
             <a class="navbar-brand" href="https://critiquewheel.blueseawriters.com">
                 <object id="object" type="image/svg+xml" preserveAspectRatio="xMidYMin slice" x="0" y="20" viewBox="0 0 100 100" width="40" height="20" data="https://critiquewheel.blueseawriters.com/images/CritiqueWheel.svg" title="Wheel Icon" xmlns="http://www.w3.org/2000/svg">
@@ -34,45 +40,116 @@
 
     
     <li class="nav-item">
-        <a class="nav-link text-light" href="/">
+        <a class="nav-link text-light" href="/policies/terms/">
         
-        Home
+        Terms and Conditions
         </a>
     </li>
     
     <li class="nav-item">
-        <a class="nav-link text-light" href="/post/">
+        <a class="nav-link text-light" href="/policies/privacy/">
         
-        Posts
+        Privacy Policy
         </a>
     </li>
     
     <li class="nav-item">
-        <a class="nav-link text-light" href="/tags/">
+        <a class="nav-link text-light" href="/policies/conduct/">
         
-        Tags
+        Code of Conduct
         </a>
     </li>
     
     <li class="nav-item">
-        <a class="nav-link text-light" id="register" href =  "https://critiquewheel.blueseawriters.com/Identity/Account/Register">Register</a>
+        <a class="nav-link text-light" href="/policies/content/">
+        
+        Content Guidelines
+        </a>
     </li>
+    
     <li class="nav-item">
-        <a class="nav-link text-light" id="login" href="https://critiquewheel.blueseawriters.com/Identity/Account/Login">Login</a>
+        <a class="nav-link text-light" href="/policies/disclaimer/">
+        
+        Disclaimer
+        </a>
     </li>
+    
+    
 </ul>
 
             </div>
         </div>
     </nav>
-</header><div id="content">
+</header>
 <h1>Categories</h1>
 
 
-        </div><footer class="border-top footer text-muted">
+                </div>
+            </div><footer class="border-top footer text-muted">
     <div class="container">
         &copy; 2021  - Blue Sea Writers <a href="https://critiquewheel.blueseawriters.com/Privacy">Privacy</a>
         </div>
-</footer><script src="https://critiquewheel.blueseawriters.com/lib/jquery/dist/jquery.min.js" Content-Type="application/javascript"></script>
-<script src="https://critiquewheel.blueseawriters.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js" Content-Type="application/javascript"></script></body>
+</footer></div><script src="https://critiquewheel.blueseawriters.com/lib/jquery/dist/jquery.min.js" Content-Type="application/javascript"></script>
+<script src="https://critiquewheel.blueseawriters.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js" Content-Type="application/javascript"></script>
+<script>
+
+  window.addEventListener('DOMContentLoaded', () => {
+    
+    
+  const observerForTableOfContentActiveState = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    const id = entry.target.getAttribute('id');
+    if (entry.intersectionRatio > 0) {
+
+      clearActiveStatesInTableOfContents();
+      document.querySelector(`#TableOfContents li a[href="#${id}"]`).parentElement.classList.add('active');
+    }
+    
+    
+    
+  } 
+      , {
+       rootMargin: '-50% 0px'
+      }
+  );
+  });
+  
+        
+        document.querySelectorAll('h2[id],h3[id],h4[id]').forEach((h2,h3,h4) => {
+          observerForTableOfContentActiveState.observe(h2,h3,h4);
+        });
+        
+  });
+  
+  function clearActiveStatesInTableOfContents() {
+                    document.querySelectorAll(`#TableOfContents ul li`).forEach((li) => {
+                      li.classList.remove('active');
+                    });
+                  
+                }
+
+  function calculateTopValueForLongTOC() {
+    var tocInfo = document.querySelector('#TableOfContents');
+    var contentInfo = document.querySelector('.content-block');
+    var tocHeight=tocInfo.offsetHeight;
+    var contentHeight=contentInfo.offsetWidth;
+    var screenHeight = screen.height;
+    console.log("TOC height is: " +tocHeight);
+    console.log("Content height is: " +contentHeight);
+
+    console.log("Screen height is: "+ screenHeight);
+    if (tocHeight > screenHeight)
+    {
+      console.log("TOC is higher than the screen. eek!");
+    } else
+    {
+      console.log("TOC is smaller than the screen. eek!");
+      document.getElementsByClassName('section-nav').style.height = contentHeight;
+      document.getElementsByClassName('section-nav').style.position = sticky;
+      
+    }
+  }
+  
+  
+  </script></body>
 </html>

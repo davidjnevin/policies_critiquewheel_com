@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     
-    <title>Critique Wheel Policies | Tags</title>
+    <title>Critique Wheel Policies | My Second Post</title>
     <link rel="stylesheet" href="/css/policySite.css" Content-Type="text/css; charset=utf-8">
     <link rel="stylesheet" href="https://critiquewheel.blueseawriters.com/lib/bootstrap/dist/css/bootstrap.min.css" Content-Type="text/css; charset=utf-8" />
     <link rel="stylesheet" href="https://critiquewheel.blueseawriters.com/css/site.css" Content-Type="text/css; charset=utf-8" />
@@ -12,7 +12,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="https://critiquewheel.blueseawriters.com/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="https://critiquewheel.blueseawriters.com/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://critiquewheel.blueseawriters.com/favicon-16x16.png">
-    
+    <link rel="manifest" href="https://critiquewheel.blueseawriters.com/site.webmanifest">
 </head><body>
         <noscript>
             You need to enable JavaScript to run this app.
@@ -20,7 +20,7 @@
         <div id="root">
             <div class="page-wrapper container-fluid">
                 <div><header>
-    <nav id="navigation" class="navbar navbar-fixed-top navbar-expand-sm navbar-toggleable-lg navbar-dark bg-dark border-bottom box-shadow mb-3 ">
+    <nav id="navigation" class="navbar navbar-fixed-top navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3 ">
         <div class="container">
             <a class="navbar-brand" href="https://critiquewheel.blueseawriters.com">
                 <object id="object" type="image/svg+xml" preserveAspectRatio="xMidYMin slice" x="0" y="20" viewBox="0 0 100 100" width="40" height="20" data="https://critiquewheel.blueseawriters.com/images/CritiqueWheel.svg" title="Wheel Icon" xmlns="http://www.w3.org/2000/svg">
@@ -40,49 +40,77 @@
 
     
     <li class="nav-item">
-        <a class="nav-link text-light" href="/policies/terms/">
+        <a class="nav-link text-light" href="/">
         
-        Terms and Conditions
+        Home
         </a>
     </li>
     
     <li class="nav-item">
-        <a class="nav-link text-light" href="/policies/privacy/">
+        <a class="nav-link text-light" href="/post/">
         
-        Privacy Policy
+        Posts
         </a>
     </li>
     
     <li class="nav-item">
-        <a class="nav-link text-light" href="/policies/conduct/">
+        <a class="nav-link text-light" href="/tags/">
         
-        Code of Conduct
+        Tags
         </a>
     </li>
     
     <li class="nav-item">
-        <a class="nav-link text-light" href="/policies/content/">
-        
-        Content Guidelines
-        </a>
+        <a class="nav-link text-light" id="register" href =  "https://critiquewheel.blueseawriters.com/Identity/Account/Register">Register</a>
     </li>
-    
     <li class="nav-item">
-        <a class="nav-link text-light" href="/policies/disclaimer/">
-        
-        Disclaimer
-        </a>
+        <a class="nav-link text-light" id="login" href="https://critiquewheel.blueseawriters.com/Identity/Account/Login">Login</a>
     </li>
-    
-    
 </ul>
 
             </div>
         </div>
     </nav>
 </header>
-<h1>Tags</h1>
+<main>
+    <div class="container">
+        <div class="row sticky-container">
+            <div class="col-md-4 col-sm-5 col-xs-12 ">
+                <div class="sticky-outer-wrapper" style="">
+                    <div class="sticky-inner-wrapper" style="position: relative; top: 0px;">
+                        <nav class="section-nav">
+                            <aside>
+                                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#testing-a-second-post">testing a second post</a></li>
+  </ul>
+</nav>
+                            </aside>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+    <div class="col-md-8 col-sm-7 col-xs-12 content-column">
+        <div class="content-wrapper">
+            <article>
+                <h1>My Second Post</h1>
+                
 
+<time datetime="2021-07-12">Jul 12, 2021</time>
+                <br>
+                <br>
+                <h2 id="testing-a-second-post">testing a second post</h2>
+
+            </article>
+        </div>
+        </div>
+    </div>
+</div>
+
+
+    
+   
+</main>
 
                 </div>
             </div><footer class="border-top footer text-muted">
@@ -90,66 +118,5 @@
         &copy; 2021  - Blue Sea Writers <a href="https://critiquewheel.blueseawriters.com/Privacy">Privacy</a>
         </div>
 </footer></div><script src="https://critiquewheel.blueseawriters.com/lib/jquery/dist/jquery.min.js" Content-Type="application/javascript"></script>
-<script src="https://critiquewheel.blueseawriters.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js" Content-Type="application/javascript"></script>
-<script>
-
-  window.addEventListener('DOMContentLoaded', () => {
-    
-    
-  const observerForTableOfContentActiveState = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    const id = entry.target.getAttribute('id');
-    if (entry.intersectionRatio > 0) {
-
-      clearActiveStatesInTableOfContents();
-      document.querySelector(`#TableOfContents li a[href="#${id}"]`).parentElement.classList.add('active');
-    }
-    
-    
-    
-  } 
-      , {
-       rootMargin: '-50% 0px'
-      }
-  );
-  });
-  
-        
-        document.querySelectorAll('h2[id],h3[id],h4[id]').forEach((h2,h3,h4) => {
-          observerForTableOfContentActiveState.observe(h2,h3,h4);
-        });
-        
-  });
-  
-  function clearActiveStatesInTableOfContents() {
-                    document.querySelectorAll(`#TableOfContents ul li`).forEach((li) => {
-                      li.classList.remove('active');
-                    });
-                  
-                }
-
-  function calculateTopValueForLongTOC() {
-    var tocInfo = document.querySelector('#TableOfContents');
-    var contentInfo = document.querySelector('.content-block');
-    var tocHeight=tocInfo.offsetHeight;
-    var contentHeight=contentInfo.offsetWidth;
-    var screenHeight = screen.height;
-    console.log("TOC height is: " +tocHeight);
-    console.log("Content height is: " +contentHeight);
-
-    console.log("Screen height is: "+ screenHeight);
-    if (tocHeight > screenHeight)
-    {
-      console.log("TOC is higher than the screen. eek!");
-    } else
-    {
-      console.log("TOC is smaller than the screen. eek!");
-      document.getElementsByClassName('section-nav').style.height = contentHeight;
-      document.getElementsByClassName('section-nav').style.position = sticky;
-      
-    }
-  }
-  
-  
-  </script></body>
+<script src="https://critiquewheel.blueseawriters.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js" Content-Type="application/javascript"></script></body>
 </html>
