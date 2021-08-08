@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html><head>
+	<meta name="generator" content="Hugo 0.84.2" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    
+    <title>Critique Wheel Policies</title>
+    <link rel="stylesheet" href="/css/policySite.css" Content-Type="text/css; charset=utf-8">
+    <link rel="stylesheet" href="https://critiquewheel.blueseawriters.com/lib/bootstrap/dist/css/bootstrap.min.css" Content-Type="text/css; charset=utf-8" />
+    <link rel="stylesheet" href="https://critiquewheel.blueseawriters.com/css/site.css" Content-Type="text/css; charset=utf-8" />
+    <link href="https://critiquewheel.blueseawriters.com/lib/font-awesome/css/all.min.css" rel="stylesheet" Content-Type="text/css; charset=utf-8" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://critiquewheel.blueseawriters.com/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://critiquewheel.blueseawriters.com/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://critiquewheel.blueseawriters.com/favicon-16x16.png">
+    
+</head><body>
+        <noscript>
+            You need to enable JavaScript to run this app.
+        </noscript>
+        <div id="root">
+            <div class="page-wrapper container-fluid">
+                <div><header>
+    <nav id="navigation" class="navbar navbar-fixed-top navbar-expand-sm navbar-toggleable-lg navbar-dark bg-dark border-bottom box-shadow mb-3 ">
+        <div class="container">
+            <a class="navbar-brand" href="https://critiquewheel.blueseawriters.com">
+                <object id="object" type="image/svg+xml" preserveAspectRatio="xMidYMin slice" x="0" y="20" viewBox="0 0 100 100" width="40" height="20" data="https://critiquewheel.blueseawriters.com/images/CritiqueWheel.svg" title="Wheel Icon" xmlns="http://www.w3.org/2000/svg">
+                    CW
+                </object>
+                Critique Wheel
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <ul class="navbar-nav flex-grow-1">
+                </ul>
+                
+<ul class="navbar-nav">
+
+    
+    <li class="nav-item">
+        <a class="nav-link text-light" href="/policies/terms/">
+        
+        Terms and Conditions
+        </a>
+    </li>
+    
+    <li class="nav-item">
+        <a class="nav-link text-light" href="/policies/privacy/">
+        
+        Privacy Policy
+        </a>
+    </li>
+    
+    <li class="nav-item">
+        <a class="nav-link text-light" href="/policies/conduct/">
+        
+        Code of Conduct
+        </a>
+    </li>
+    
+    <li class="nav-item">
+        <a class="nav-link text-light" href="/policies/content/">
+        
+        Content Guidelines
+        </a>
+    </li>
+    
+    <li class="nav-item">
+        <a class="nav-link text-light" href="/policies/disclaimer/">
+        
+        Disclaimer
+        </a>
+    </li>
+    
+    
+</ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<div id="home-jumbotron" class="jumbotron text-center">
+<h1>This site is in beta.</h1>
+  
+  <p>We appreciate your time in visiting us.</p>
+
+  <h2>Most commonly asked questions?</h2>
+
+<h2>Copyright</h2>
+
+<p>You retain your copyright and all rights on your own material.</p>
+
+<h2>Content Guidelines</h2>
+
+<p>All story drats posted a reviewed before they are added to the story pool for critique.</p>
+    
+    <p>We don't accept pornography or any hate speech.</p>
+
+    <p>Content should be marked as mature or suitable for all audiences by the author.</p>
+
+    <p>A content advisory field is available for authors to use where required.</p>
+
+<h2>Please read</h2>
+
+<p>The terms and conditions, Privacy Policy, Code of Conduct Pledge, and the Disclaimer.</p>
+</div>
+
+                </div>
+            </div><footer class="border-top footer text-muted">
+    <div class="container">
+        &copy; 2021  - Blue Sea Writers <a href="https://critiquewheel.blueseawriters.com/Privacy">Privacy</a>
+        </div>
+</footer></div><script src="https://critiquewheel.blueseawriters.com/lib/jquery/dist/jquery.min.js" Content-Type="application/javascript"></script>
+<script src="https://critiquewheel.blueseawriters.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js" Content-Type="application/javascript"></script>
+<script>
+
+  window.addEventListener('DOMContentLoaded', () => {
+    
+    
+  const observerForTableOfContentActiveState = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    const id = entry.target.getAttribute('id');
+    if (entry.intersectionRatio > 0) {
+
+      clearActiveStatesInTableOfContents();
+      document.querySelector(`#TableOfContents li a[href="#${id}"]`).parentElement.classList.add('active');
+    }
+    
+    
+    
+  } 
+      , {
+       rootMargin: '-50% 0px'
+      }
+  );
+  });
+  
+        
+        document.querySelectorAll('h2[id],h3[id],h4[id]').forEach((h2,h3,h4) => {
+          observerForTableOfContentActiveState.observe(h2,h3,h4);
+        });
+        
+  });
+  
+  function clearActiveStatesInTableOfContents() {
+                    document.querySelectorAll(`#TableOfContents ul li`).forEach((li) => {
+                      li.classList.remove('active');
+                    });
+                  
+                }
+
+  function calculateTopValueForLongTOC() {
+    var tocInfo = document.querySelector('#TableOfContents');
+    var contentInfo = document.querySelector('.content-block');
+    var tocHeight=tocInfo.offsetHeight;
+    var contentHeight=contentInfo.offsetWidth;
+    var screenHeight = screen.height;
+    console.log("TOC height is: " +tocHeight);
+    console.log("Content height is: " +contentHeight);
+
+    console.log("Screen height is: "+ screenHeight);
+    if (tocHeight > screenHeight)
+    {
+      console.log("TOC is higher than the screen. eek!");
+    } else
+    {
+      console.log("TOC is smaller than the screen. eek!");
+      document.getElementsByClassName('section-nav').style.height = contentHeight;
+      document.getElementsByClassName('section-nav').style.position = sticky;
+      
+    }
+  }
+  
+  
+  </script></body>
+</html>
