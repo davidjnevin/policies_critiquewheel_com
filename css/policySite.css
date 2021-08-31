@@ -98,13 +98,22 @@ main {
   margin: 0 auto;
 }
 
-  #navigation {
+#navigation {
     position: fixed !important;
     top: 0;
     left: 0;
     z-index: 999;
     width: 100%;
 }
+
+#breadcrumbs {
+  position: absolute;
+  top: 10;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+}
+
 .content-block {
   max-width: 70ch;
 }
